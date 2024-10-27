@@ -1,32 +1,42 @@
-// import { useEffect, useState } from "react";
-// import { Routes, Route } from "react-router-dom";
-// import NavBar from "./components/Navbar.jsx";
-// import HomePage from "./pages/HomePage.jsx";
-// import RecipeDetails from "./pages/RecipeDetails.jsx";
-// import RecipePage from "./pages/RecipePage.jsx"
-
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavBar from "./components/NavBar.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import RecipeDetails from "./pages/RecipeDetails.jsx";
+import RecipePage from "./pages/RecipePage.jsx";
+import Login from "./pages/Login.jsx";
+import Signup from "./pages/Signup.jsx"
+import "./App.css";
 
 function App() {
+  //State for recipes if needed, assumed to be fetched and stored here
+  const[recipes, setRecipes] = useState ([]);
+
+  //fetch all recipes when component first render
+  useEffect(() => {
+  // fetch all recipes
+  const fetchRecipes = async() => {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/projects/`);
+  const recipesData = await res.json();
+  console.log(recipesData);
+  setRecipes(recipesData.projects);  
+  };
+
+  fetchRecipes();
+  }, [])
 
 
   return (
-    // <Router>
-    // <NavBar />
-    // <Routes>
-    // <Route path="/" element={<HomePage />} />
-    // <Route path="/" element={<RecipesPage />} />
-    // <Route path="/" element={<RecipeDetails />} />
-    // <Route path="/" element={<Login/>} />
-    // <Route path="/" element={<Signup/>} />
-    // </Routes>
-    // </Router>
-    <main className="bg-indigo-500 md:bg-amber-300 lg:bg-violet-400  h-screen text-center p-10 ">
-      <h1 className="text-5xl text-white p-10">Capstone Project</h1>
-
-      <div className="bg-indigo-300  text-center p-10 rounded-full border-4 hover:bg-blue-700 hover:cursor-pointer">
-        <div className="text-xl md:text-2xl lg:text-3xl font-bold">LOGO</div>
-      </div>
-    </main>
+    <Router>
+    <NavBar />
+    <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/recipes" element={<RecipePage recipes={recipes} />} />
+    <Route path="/recipes/:id" element={<RecipeDetails />} />
+    <Route path="/login" element={<Login/>} />
+    <Route path="/signup" element={<Signup/>} />
+    </Routes> 
+    </Router>   
   )
 }
 

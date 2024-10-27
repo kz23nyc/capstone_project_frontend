@@ -1,11 +1,10 @@
-export default function HomePage() {
+export default function HomePage() {  
   return (
     <div>
       <div>
         <header>
           <div>
-            <img
-              src="./src/assests/Pcapstone_project\frontend\src\assets\Pantrylicious logo.png"
+            <img src="./images/logo.png"          
               alt="PantryLicious Logo"
             />
             <h1>Pantrylicious</h1>
