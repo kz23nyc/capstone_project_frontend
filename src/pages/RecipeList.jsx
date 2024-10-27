@@ -2,31 +2,30 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { RecipeContext } from '../context/RecipeContext'; 
 
-const RecipePage = () => {
+const RecipeList = () => {
   const { state } = useContext(RecipeContext); // access to the global state by RecipeContext in the app
   const { recipes, loading, error } = state; // Pull out the recipes, loading, error properties from the state to use them in our component logic
 
   // Conditional rendering
-  if (loading) return <p style={styles.message}>Loading...</p>; // Loading State
-  if (error) return <p style={styles.message}>{error}</p>; // Error State
+  if (loading) return <p>Loading...</p>; // Loading State
+  if (error) return <p>{error}</p>; // Error State
   // If the recipes array is empty or undefined
-  if (!recipes || recipes.length === 0) return <p style={styles.message}>No recipes found.</p>;
+  if (!recipes || recipes.length === 0) return <p>No recipes found.</p>;
 
   // Rendering the recipe list
   return (
-    {recipes.map(recipe => (
-        <div>
-        <div>
-          <img
-            src={recipe.image || 'https://via.placeholder.com/128x195.png?text=No+Image'}
-            alt={recipe.title}
-            style={styles.image}
-          /></div>
+    <div>
+      {recipes.map((recipe) => (
+        <div key={recipe.id}>
           <h3>{recipe.title}</h3>
-          <Link to="/" >View Details</Link>       
+          <p>{recipe.description}</p>
+          <Link to={`/recipes/${recipe.id}`}>View Details</Link>
         </div>
       ))}
-    );
-   
+    </div>
+  );
+};
 
-export default RecipePage;
+export default RecipeList;
+
+
