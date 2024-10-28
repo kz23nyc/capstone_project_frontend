@@ -7,17 +7,17 @@ import featuredRecipe2 from "../assets/images/salad.jpg";
 export default function HomePage() {
   return (
     <div className="container mx-auto px-4">
-      <header className="flex justify-between items-center py-4">
+      <header className="flex justify-between items-center py-4 font-custom">
         <div className="flex items-center space-x-4">
           <img src={logo} alt="PantryLicious Logo" className="h-36" />
           <div>
-            <h1 className="text-2xl text-green-600 font-bold">PantryLicious</h1>
-            <h2 className="text-xl text-green-500">
+            <h1 className="text-3xl text-green-600 font-bold">PantryLicious</h1>
+            <h2 className="text-2xl text-green-500">
               Whip up Magic with What You Have
             </h2>
           </div>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 text-lg">
           <Link
             to="/login"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center justify-center"
@@ -41,34 +41,36 @@ export default function HomePage() {
         />
       </div>
 
-      <nav className="flex justify-around text-sm font-medium text-gray-700 py-3 bg-gray-100 rounded-md">
-        <a href="#" className="hover:text-green-600">
+      <nav className="flex justify-around text-lg text-gray-700 py-10 bg-gray-100 rounded-md">
+        <Link to="/recipes" className="hover:text-green-600">
           Dinner
-        </a>
-        <a href="#" className="hover:text-green-600">
+        </Link>
+        <Link to="/recipes" className="hover:text-green-600">
           Quick & Easy
-        </a>
-        <a href="#" className="hover:text-green-600">
+        </Link>
+        <Link to="/recipes" className="hover:text-green-600">
           Breakfast
-        </a>
-        <a href="#" className="hover:text-green-600">
+        </Link>
+        <Link to="/recipes" className="hover:text-green-600">
           Salad
-        </a>
-        <a href="#" className="hover:text-green-600">
+        </Link>
+        <Link to="/about" className="hover:text-green-600">
           About us
-        </a>
-        <a href="#" className="hover:text-green-600">
+        </Link>
+        <Link to="/" className="hover:text-green-600">
           Newsletter
-        </a>
+        </Link>
       </nav>
 
       <main className="py-4">
         <div className="flex justify-center mb-6">
-          <img
-            src={mainImage}
-            alt="Delicious Pasta"
-            className="rounded-lg shadow-lg"
-          />
+          <Link className="first-line:" to="/recipes">
+            <img
+              src={mainImage}
+              alt="Delicious Pasta"
+              className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+            />
+          </Link>
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -88,6 +90,15 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      <div className="max-w-xs mx-auto mt-10">
+        <Link
+          to="/recipes"
+          className="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Find out more recipes
+        </Link>
+      </div>
 
       <footer className="text-center py-4 text-sm text-gray-600">
         © 2024 PantryLicious all rights reserved

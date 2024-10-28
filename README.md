@@ -1,10 +1,21 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 # capstone_project_frontend
+
+## Description
+Thanks for exploring the Best-README-Template! If you have any suggestions to improve it, feel free to fork the repository and submit a pull request, or open an issue with the "enhancement" tag. And don’t forget to give the project a star! We really appreciate your support. Now go build something incredible! 😄
+
+## Technolgoies
+
+1. React
+2. Vite
+3. JavaScript(ES6+)
+4. Tailwind
+
+## Acknowledgement
+https://www.allrecipes.com/
+
+https://www.taste.com.au/quick-easy/galleries/top-100-easy-dinner-recipes/biccuul7
+
+https://github.com/kz23nyc/SBA320H_react_bookfinder.git
+

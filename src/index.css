@@ -1,3 +1,22 @@
+/* Import Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*Tailwind*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Custom Font-Face*/
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/path/to/CustomFont.woff2') format('woff2'),
+         url('/path/to/CustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+}

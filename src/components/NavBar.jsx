@@ -13,21 +13,7 @@ export default function NavBar() {
     <Link to="/login" className="px-2">Login</Link>
     <Link to="/signup" className="px-2">Signup</Link>
   </div>
-</nav>
-
-
-
-    // <nav>
-    //  <Link to="/">
-    //     <img src={logo} alt="Logo"/>
-    //   </Link>
-    //   <div>
-    //     <Link to="/recipes" >Recipes</Link>
-    //     <Link to="/about" >About us</Link>
-    //     <Link to="/login" >Login</Link>
-    //     <Link to="/signup" >Signup</Link>
-    //   </div>
-    // </nav>
+</nav>   
   );
 }
 
