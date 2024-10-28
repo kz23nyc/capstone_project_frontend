@@ -1,8 +1,8 @@
 export default function AboutPage() {
   return (
-    <main>
-      <h1>About Us</h1>
-      <p>
+    <main className="max-w-4xl mx-auto mt-10 p-4">
+        <h1 className="text-2xl font-bold mb-4">About Us</h1>
+        <p className="text-gray-600">
         At Pantrylicious, we believe that great meals start with simple
         ingredients already at your fingertips. In today&apos;s fast-paced world, taking time out for grocery shopping can often be a hassle, and while takeout might seem like a quick fix, it&apos;s not always healthy or cost-effective. That is why we created Pantrylicious — a recipe app designed for both the avid cook and the reluctant chef who both aspire to craft healthy, delicious meals without the fuss. 
         

@@ -29,19 +29,19 @@ const RecipeDetails = () => {
   if (!recipe) return <p>No recipe found.</p>;
 
   return (
-    <div >
-      <Link to="/" >← Back to Recipes</Link>
-      <div >
-        <img
-          src={recipe.image || 'https://via.placeholder.com/128x195.png?text=No+Image'}
-          alt={recipe.title}
-     
-        />
-        <div >
-          <h2>{recipe.title}</h2>
-          <h3>By {recipe.author}</h3>
-          <p>Cuisine:</p>        
-          <p>{recipe.description}</p>
+    <div className="max-w-4xl mx-auto p-4">
+    <Link to="/" className="text-blue-500 hover:text-blue-700">← Back to Recipes</Link>
+    <div className="mt-4">
+      <img
+        src={recipe.image || 'https://via.placeholder.com/128x195.png?text=No+Image'}
+        alt={recipe.title}
+        className="w-full h-auto object-cover"
+      />
+      <div className="mt-4">
+        <h2 className="text-xl font-bold">{recipe.title}</h2>
+        <h3 className="text-md text-gray-600">By {recipe.author}</h3>
+        <p className="text-sm text-gray-800">Cuisine:</p>        
+        <p className="text-gray-800">{recipe.description}</p>
         </div>
       </div>
     </div>
