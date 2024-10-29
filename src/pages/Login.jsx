@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import signin from "../assets/images/signin.jpg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -12,7 +13,6 @@ const LoginPage = () => {
     setError('');
 
     try {
-    
       const response = await fetch('mongodb+srv://kzy1024:jto4XWXVJLPvloWq@sei.wnh4u.mongodb.net/capstoneproject?retryWrites=true&w=majority', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -21,7 +21,6 @@ const LoginPage = () => {
       const data = await response.json();
 
       if (response.ok) {
-      
         console.log('Login successful:', data);
         navigate('/dashboard'); 
       } else {
@@ -34,22 +33,37 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="max-w-xs mx-auto mt-10">
-      <h1 className="text-xl font-bold mb-4">Login</h1>
-      {error && <p className="text-red-500">{error}</p>}
-      <form onSubmit={handleLogin} className="flex flex-col space-y-4">
-      <label>
-      Email:
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="form-input"/>
-    </label>
-    <label>
-      Password:
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} required className="form-input"/>
-    </label>
-    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Log In</button>
-  </form>
-  <button onClick={() => navigate('/signup')} className="mt-4 text-blue-500">Need an account? Sign up.</button>
-</div>
+    <div className="flex flex-col min-h-screen bg-white">
+      <nav className="flex justify-around text-lg text-gray-700 py-10 bg-gray-100 rounded-md">
+        <Link to="/recipes" className="hover:text-green-600">Dinner</Link>
+        <Link to="/recipes" className="hover:text-green-600">Quick & Easy</Link>
+        <Link to="/recipes" className="hover:text-green-600">Breakfast</Link>
+        <Link to="/recipes" className="hover:text-green-600">Salad</Link>
+        <Link to="/about" className="hover:text-green-600">About Us</Link>
+        <Link to="/" className="hover:text-green-600">Newsletter</Link>
+      </nav>
+      <div className="flex-grow flex md:flex-row items-center justify-center">
+        <div className="md:w-1/2 flex justify-center items-start">
+          <img src={signin} alt="Login Visual" className="max-w-sm rounded-lg shadow-lg" />
+        </div>
+        <div className="max-w-xs mx-auto p-4">
+          <h1 className="text-xl font-bold mb-4">Login</h1>
+          {error && <p className="text-red-500">{error}</p>}
+          <form onSubmit={handleLogin} className="flex flex-col space-y-4">
+            <label>
+              Email:
+              <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="form-input w-full px-2 py-1 rounded"/>
+            </label>
+            <label>
+              Password:
+              <input type="password" value={password} onChange={e => setPassword(e.target.value)} required className="form-input w-full px-2 py-1 rounded"/>
+            </label>
+            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Log In</button>
+          </form>
+          <button onClick={() => navigate('/signup')} className="mt-4 text-blue-500 hover:text-blue-600">Need an account? Sign up.</button>
+        </div>
+      </div>
+    </div>
   );
 };
 

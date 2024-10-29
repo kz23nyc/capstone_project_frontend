@@ -12,8 +12,8 @@ export default function HomePage() {
           <img src={logo} alt="PantryLicious Logo" className="h-36" />
           <div>
             <h1 className="text-3xl text-green-600 font-bold">PantryLicious</h1>
-            <h2 className="text-2xl text-green-500">
-              Whip up Magic with What You Have
+            <h2 className="text-xl text-green-500 font-light italic">
+              whip up magic with what you have
             </h2>
           </div>
         </div>
@@ -74,19 +74,27 @@ export default function HomePage() {
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex justify-center">
+          <div className="flex flex-col justify-center items-center">
             <img
               src={featuredRecipe1}
               alt="Featured Recipe 1"
               className="rounded-lg shadow-lg"
             />
+            <p className="mt-2 text-center text-lg text-gray-600">
+              Fresh Spaghetti with Herbs
+            </p>{" "}
+            {/* Subtitle for the first image */}
           </div>
-          <div className="flex justify-center">
+          <div className="flex flex-col justify-center items-center">
             <img
               src={featuredRecipe2}
               alt="Featured Recipe 2"
               className="rounded-lg shadow-lg"
             />
+            <p className="mt-2 text-center text-lg text-gray-600">
+              Colorful Vegan Buddha Bowl
+            </p>{" "}
+            {/* Subtitle for the second image */}
           </div>
         </section>
       </main>

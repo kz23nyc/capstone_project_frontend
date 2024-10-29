@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className="flex items-center justify-between p-4 bg-green-500 text-white">
   <Link to="/">
-    <img src={logo} alt="Pantrylicious Logo" className="h-8"/>
+    <img src={logo} alt="Pantrylicious Logo" className="h-16"/>
   </Link>
   <div>
     <Link to="/recipes" className="px-2">Recipes</Link>
