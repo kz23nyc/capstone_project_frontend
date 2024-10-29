@@ -11,6 +11,7 @@ Thanks for exploring the Best-README-Template! If you have any suggestions to im
 2. Vite
 3. JavaScript(ES6+)
 4. Tailwind
+5. Cloudinary
 
 ## Acknowledgement
 https://www.allrecipes.com/
