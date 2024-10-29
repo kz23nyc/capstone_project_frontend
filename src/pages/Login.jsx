@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import signin from "../assets/images/signin.jpg";
+// import signin from "../assets/images/signin.jpg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +32,9 @@ const LoginPage = () => {
     }
   };
 
+const signin ="https://res.cloudinary.com/dbndth2od/image/upload/v1730173276/signin_pg9tou.jpg"
+
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <nav className="flex justify-around text-lg text-gray-700 py-10 bg-gray-100 rounded-md">
@@ -42,9 +45,9 @@ const LoginPage = () => {
         <Link to="/about" className="hover:text-green-600">About Us</Link>
         <Link to="/" className="hover:text-green-600">Newsletter</Link>
       </nav>
-      <div className="flex-grow flex md:flex-row items-center justify-center">
+      <div className="flex-grow flex md:flex-row justify-items-start justify-center">
         <div className="md:w-1/2 flex justify-center items-start">
-          <img src={signin} alt="Login Visual" className="max-w-sm rounded-lg shadow-lg" />
+          <img src={signin} alt="Login Visual" className="max-w-2xl" />
         </div>
         <div className="max-w-xs mx-auto p-4">
           <h1 className="text-xl font-bold mb-4">Login</h1>

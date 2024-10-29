@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
-import mainImage from "../assets/images/mainimage.png";
-import featuredRecipe1 from "../assets/images/pasta.jpg";
-import featuredRecipe2 from "../assets/images/salad.jpg";
+// import logo from "../assets/images/logo.png";
+// import mainImage from "../assets/images/mainimage.png";
+// import featuredRecipe1 from "../assets/images/pasta.jpg";
+// import featuredRecipe2 from "../assets/images/salad.jpg";
 
 export default function HomePage() {
+  const logo ="https://res.cloudinary.com/dbndth2od/image/upload/v1730173149/Black_and_Orange_Round_Organic_Illustrative_Market_Food_Logo_1_mbpwmf.png";
+  const mainImage = "https://res.cloudinary.com/dbndth2od/image/upload/v1730173267/mainimage_ztwuyp.png";
+  const featuredRecipe1 = "https://res.cloudinary.com/dbndth2od/image/upload/v1730173270/pasta_kedyfy.jpg";
+  const featuredRecipe2 = "https://res.cloudinary.com/dbndth2od/image/upload/v1730173274/pexels-heather-brock-31614773-6978146_o62guu.jpg";
+
+
+
   return (
     <div className="container mx-auto px-4">
       <header className="flex justify-between items-center py-4 font-custom">

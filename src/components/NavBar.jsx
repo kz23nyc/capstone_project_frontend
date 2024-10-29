@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import logo from '../assets/images/logo.png';
+// import logo from '../assets/images/logo.png';
 
 export default function NavBar() {
+
+  const logo = "https://res.cloudinary.com/dbndth2od/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1730173149/Black_and_Orange_Round_Organic_Illustrative_Market_Food_Logo_1_mbpwmf.png";
+
   return (
     <nav className="flex items-center justify-between p-4 bg-green-500 text-white">
   <Link to="/">

@@ -11,6 +11,7 @@ import Signup from "./pages/Signup.jsx"
 import { Cloudinary } from '@cloudinary/url-gen';
 import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+// eslint-disable-next-line no-unused-vars
 import { AdvancedImage } from '@cloudinary/react';
 
 
@@ -20,6 +21,7 @@ const cld = new Cloudinary({
 });
 
  // Create a Cloudinary instance
+ // eslint-disable-next-line no-unused-vars
  const img = cld
  .image('cld-sample-4')
  .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
@@ -39,10 +41,10 @@ const App= () => (
     <Route path="/signup" element={<Signup/>} />
     </Routes> 
      {/* Render the Cloudinary image */}
-     <div className="p-4">
+     {/* <div className="p-4">
         <AdvancedImage cldImg={img} />
       </div>
-    
+     */}
     
     </Router>   
   

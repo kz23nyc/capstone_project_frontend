@@ -1,6 +1,9 @@
-import aboutus from "../assets/images/aboutus.jpg";
+// import aboutus from "../assets/images/aboutus.jpg";
 
 export default function AboutPage() {
+  const aboutus = "https://res.cloudinary.com/dbndth2od/image/upload/v1730173258/aboutus_wzzqlz.jpg";
+ 
+ 
   return (
     <main className="max-w-4xl mx-auto mt-10 p-4">
 
@@ -44,7 +47,10 @@ export default function AboutPage() {
           alt="Featured Recipe 1"
           className="rounded-lg shadow-lg"
         />
-      </div>
+      </div>      
     </main>
+
+    
+
   );
 }
