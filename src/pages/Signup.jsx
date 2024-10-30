@@ -34,7 +34,7 @@ export default function SignupPage() {
     <div className="flex flex-col min-h-screen bg-white">
       <nav className="flex justify-around text-lg text-gray-700 py-10 bg-gray-100 rounded-md">
         <Link to="/recipes" className="hover:text-green-600">Dinner</Link>
-        <Link to="/recipes" className="hover:text-green-600">Quick & Easy</Link>
+        <Link to="/recipes" className="hover:text-green-600">Vegan</Link>
         <Link to="/recipes" className="hover:text-green-600">Breakfast</Link>
         <Link to="/recipes" className="hover:text-green-600">Salad</Link>
         <Link to="/about" className="hover:text-green-600">About Us</Link>

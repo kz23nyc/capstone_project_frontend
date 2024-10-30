@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -28,8 +29,24 @@ const cld = new Cloudinary({
  .quality('auto')
  .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
 
-const App= () => (
- 
+ const App = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    const fetchRecipes = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/recipes/`);
+        const data = await response.json();
+        setRecipes(data.recipes);
+      } catch (error) {
+        console.error('Failed to fetch recipes:', error);
+      }
+    };
+
+    fetchRecipes();
+  }, []);
+  
+  return (
     <Router>
     <NavBar />
     <Routes>
@@ -47,8 +64,8 @@ const App= () => (
      */}
     
     </Router>   
-  
-  );
+   );
+ };
  
 
 export default App;

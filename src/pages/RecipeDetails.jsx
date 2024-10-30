@@ -39,8 +39,8 @@ const RecipeDetails = () => {
       />
       <div className="mt-4">
         <h2 className="text-xl font-bold">{recipe.title}</h2>
-        <h3 className="text-md text-gray-600">By {recipe.author}</h3>
-        <p className="text-sm text-gray-800">Cuisine:</p>        
+        <h3 className="text-md text-gray-600">{recipe.categories}</h3>
+        <p className="text-sm text-gray-800">{recipe.ingredients}</p>        
         <p className="text-gray-800">{recipe.description}</p>
         </div>
       </div>
